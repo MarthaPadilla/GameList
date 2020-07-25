@@ -4,6 +4,8 @@ import android.content.Context;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gamelist.Modelo.Games;
+
 import java.util.ArrayList;
 
 public class RecyclerViewA {
