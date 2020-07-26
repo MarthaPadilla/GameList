@@ -4,6 +4,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
@@ -46,5 +47,13 @@ public class MySingleton {
      if (requestQueue==null){
          requestQueue= Volley.newRequestQueue(con.getApplicationContext());
      }
+     return requestQueue;
+ }
+
+ public <T> void addToRequestQueue(Request<T> req){
+     getRequestQueue().add(req);
+ }
+ public  ImageLoader getImageLoader(){
+     return imageLoader;
  }
 }
